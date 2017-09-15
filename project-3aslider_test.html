@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    
+    <script src="js/Feedback.js"></script>
+<style>
+body {
+	width:66%;
+	margin:auto;
+	font-family: sans-serif;
+	line-height:140%;
+	background-color: gray;
+	color: white;
+}
+	
+#top {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	line-height: 120%;
+	text-align: center;
+}
+
+#thanks{
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 45px;
+	color: #435c84;
+}
+	
+form {
+	width: 510px;
+	margin: 90px auto 30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: center;
+	background-color: #435c84;
+	color: white;
+	box-shadow: inset 0px 0px 60px #95acc4;
+	border-radius: 5px;
+	font-size: 18px;
+}
+	
+
+input[type=range] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+	input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+	input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+	input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #3071A9;
+}
+	input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+	input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+	input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+	input[type=range]::-ms-fill-lower {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+	input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071A9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #3071A9;
+}
+
+	
+	button{
+    color: #435c84;
+	font-weight: bold;
+	border:2px solid #3071A9;
+	font-size: 13px;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 15px;
+	background-color: white;
+}
+button:hover{
+	cursor: pointer;
+	padding: 8px;
+}
+
+	
+</style>
+<title>Feedback...</title>
+  </head>
+	
+	
+	
+	
+<body>
+	<p id="top">
+	Thank you for choosing us! Please take the time to rate your experience whith 5 being amazing and 1 being unsatisfied. please select the talk to us button to contact us or leave a review. 
+	</p>
+	<div id="thanks">THANK YOU!</div>
+	
+	
+	
+	
+
+
+<form>
+	<h3 id="selection">Please rate your experience!</h3>
+	
+<div id="box">
+	<h1>
+	<span style="color:#d0d5dd;">1</span> <input onchange="ratings()"  type="range" min="1" max="5" name="rating" id="rating" style="width:70%; height:5px;"><span style="color:#98a5ba;">5</span></h1>
+</div>
+  <!--this part of the form changes for the static and interactive models-->
+  
+</form>
+<h1>
+<button onclick="feedback(); window.location='#response'">
+      TALK TO US!</button>
+      </h1>
+  <h3 id="response"></h3>
+</body>
+</html>
